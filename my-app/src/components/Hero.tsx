@@ -5,7 +5,7 @@ import { AuroraBackground } from "@/components/AuroraBackground"; //
 
 const Hero = () => {
   return (
-    <AuroraBackground className="flex flex-col md:flex-row items-center bg-custom-bg text-white text-center relative">
+    <AuroraBackground className="flex flex-col md:flex-row items-center bg-custom-bg text-white text-center relative ">
       {/* Portrait image for mobile */}
       <div className="md:hidden -mt-16 rounded-lg overflow-hidden">
         <Image
@@ -18,8 +18,11 @@ const Hero = () => {
 
       {/* Content section */}
       <div className="md:w-1/2 p-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Next-Generation Websites Designed to Convert Leads
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-50">
+          Next-Generation Websites Designed to{" "}
+          <span className="bg-gradient-to-r from-customColor1 to-customColor2 text-transparent bg-clip-text">
+            Convert Leads
+          </span>
         </h1>
         <Button />
       </div>

@@ -62,10 +62,6 @@ const employerDescription = (
 );
 const items = [
   {
-    title: "About Me",
-    description: aboutDescription,
-  },
-  {
     header: (
       <img
         src="/strip-profile.png" // Replace with your actual image path
@@ -73,6 +69,10 @@ const items = [
         className="w-full h-full object-cover"
       />
     ),
+  },
+  {
+    // title: "About Me",
+    description: aboutDescription,
   },
   {
     title: "👨‍💻 Experience & Expertise",
@@ -143,7 +143,10 @@ const items = [
 
 export function BentoGridDemo() {
   return (
-    <div className="p-8  bg-custom-bg">
+    <div className="p-8  bg-custom-bg ">
+      <h2 className="text-gray-50 text-center font-bold text-3xl mb-6">
+        About Me
+      </h2>
       <BentoGrid className="max-w-4xl mx-auto">
         {items.map((item, i) => (
           <BentoGridItem

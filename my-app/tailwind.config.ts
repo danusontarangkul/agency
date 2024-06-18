@@ -25,6 +25,10 @@ module.exports = {
       colors: {
         "custom-bg": "#18163d", // Extend or override colors
         "light-bg": "#f0c2a7",
+        customColor1: "#cf5faa",
+        customColor2: "#f3aeab",
+        customColor3: "#6aa0c3",
+        customColor4: "#6d44a0",
       },
     },
   },
