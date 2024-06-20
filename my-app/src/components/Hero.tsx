@@ -15,10 +15,9 @@ const Hero = () => {
           height={550}
         />
       </div>
-
       {/* Content section */}
-      <div className="md:w-1/2 p-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-50">
+      <div className="md:w-1/2 p-4 md:p-12">
+        <h1 className="text-4xl font-bold mb-4 text-gray-50">
           Next-Generation Websites Designed to{" "}
           <span className="bg-gradient-to-r from-customColor1 to-customColor2 text-transparent bg-clip-text">
             Convert Leads
@@ -26,15 +25,13 @@ const Hero = () => {
         </h1>
         <Button />
       </div>
-
-      {/* Image section for desktop */}
-      <div className="hidden md:flex md:w-1/2 justify-center">
-        <div className="max-w-[50%]">
+      <div className="hidden md:flex md:w-1/2 justify-center  md:p-12">
+        <div className="">
           <Image
             src="/HeroImg.png"
             alt="Portrait Image"
             width={800}
-            height={550}
+            height={600}
             layout="responsive"
             className="rounded-lg overflow-hidden"
           />

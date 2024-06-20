@@ -1,17 +1,23 @@
 import Image from "next/image";
 import Hero from "../components/Hero";
-import Benefits from "@/components/Benefits";
+import Benefits from "@/components/Pricing";
 import { BentoGridDemo } from "@/components/About";
 import Footer from "@/components/Footer";
+import { OurAdvantage } from "@/components/OurAdvantage";
+import { Problem } from "@/components/Problem";
+import Border from "@/components/Border";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <div className="w-full h-2 bg-gradient-to-r from-customColor1 via-customColor2 to-customColor3 "></div>
+      <Border />
+      <Problem />
+      <Border />
       <BentoGridDemo />
+      <Border />
+      <OurAdvantage />
       <Benefits />
-
       <Footer />
     </main>
   );

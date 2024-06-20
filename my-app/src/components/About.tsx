@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./BentoGrid";
+import Image from "next/image";
+
 import {
   IconArrowWaveRightUp,
   IconBoxAlignRightFilled,
@@ -10,6 +12,7 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
+import Button from "./Button";
 
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
@@ -28,6 +31,23 @@ const aboutDescription = (
     custom-built websites.
   </>
 );
+const socialMedia = [
+  {
+    id: 1,
+    img: "/linkedin.svg",
+    link: "https://www.linkedin.com/in/anusontarangkul/",
+  },
+  {
+    id: 2,
+    img: "/Instagram.svg",
+    link: "https://www.instagram.com/david.anuson/",
+  },
+  {
+    id: 3,
+    img: "/youtube.svg",
+    link: "https://www.youtube.com/channel/UCYBwball06AdVuaHeH7adVw",
+  },
+];
 
 const experienceDescription = (
   <ul>
@@ -43,30 +63,41 @@ const experienceDescription = (
   </ul>
 );
 
-const employerDescription = (
-  <ul>
-    <li>
-      <strong>Software Engineer</strong> @ Twilio.
-    </li>
-    <br />
-    <li>
-      <strong>Full Stack Developement Learning Assistant</strong> @ 2U.
-    </li>
-    <br />
-    <li>
-      <strong>Night Club Promoter</strong> @ Wynn.
-    </li>
-    <br />
-    <li>Amazon Seller</li>
-  </ul>
+const contactDescription = (
+  <div className="flex flex-col items-center md:mt-2 justify-evenly">
+    <p className="mb-2 text-lg">Free consultation call to get you started.</p>
+
+    {/* <div className="flex items-center justify-center md:gap-3 gap-6 mt-3 md:mt-4"> */}
+    <Button />
+    {/* {socialMedia.map((info) => (
+        <div
+          key={info.id}
+          className="w-10 h-10 sm:w-20 sm:h-20 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-gradient-to-r from-customColor3 to-customColor1  rounded-lg border-2 border-black"
+        >
+          <a href={info.link} target="_blank">
+            <img
+              src={info.img}
+              alt="icons"
+              className="w-5 h-5 sm:w-10 sm:h-10 "
+            />
+          </a>
+        </div>
+      ))} */}
+    {/* </div> */}
+    <div className="md:text-lg font-semibold mb-1 flex flex-col md:flex-row md:items-center w-full md:justify-evenly mt-10 align-middle md:pl-0 pl-4">
+      <p className="mb-3 sm:mb-0">📱 (305) 613-4423</p>
+      <p>✉️ david.anuson@gmail.com</p>
+    </div>
+  </div>
 );
+
 const items = [
   {
     header: (
       <img
         src="/strip-profile.png" // Replace with your actual image path
         alt="The Digital Revolution"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover rounded-xl"
       />
     ),
   },
@@ -79,63 +110,19 @@ const items = [
     description: experienceDescription,
   },
   {
-    title: "Our Advantage",
-    description: "",
-    header: "",
-    icon: "",
+    title: (
+      <p className="text-custom-bg md:text-3xl">
+        Let's talk about your website goals 💬
+      </p>
+    ),
+    description: contactDescription,
   },
   {
-    title: "⚡️ Fast Loading Times",
-    description: (
-      <>
-        <strong>
-          Quick page loads result in higher Google rankings and improved user
-          satisfaction.
-        </strong>{" "}
-        Custom coding, not website builders, is our secret.
-      </>
-    ),
-
     header: (
       <img
-        src="/HeroImg.png" // Replace with your actual image path
+        src="/dog.JPG" // Replace with your actual image path
         alt="The Digital Revolution"
-        className="w-full h-full object-cover"
-      />
-    ),
-    icon: "",
-  },
-  {
-    title: <p>✏️&nbsp;&nbsp;Modern Design</p>,
-    description: (
-      <>
-        <strong>Say goodbye to outdated websites.</strong> Showcase reliability
-        and professionalism with a sleek, custom design tailored to your brand’s
-        unique needs.
-      </>
-    ),
-    header: (
-      <img
-        src="/HeroImg.png" // Replace with your actual image path
-        alt="The Digital Revolution"
-        className="w-full h-full object-cover"
-      />
-    ),
-    icon: "",
-  },
-  {
-    title: "⭐ Ongoing Support",
-    description: (
-      <>
-        <strong>A website that grows with you.</strong> Enjoy unlimited updates,
-        hassle free.
-      </>
-    ),
-    header: (
-      <img
-        src="/HeroImg.png" // Replace with your actual image path
-        alt="The Digital Revolution"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover rounded-xl"
       />
     ),
   },
@@ -143,7 +130,7 @@ const items = [
 
 export function BentoGridDemo() {
   return (
-    <div className="p-8  bg-custom-bg ">
+    <div className="px-10 py-20 bg-custom-bg ">
       <h2 className="text-gray-50 text-center font-bold text-3xl mb-6">
         About Me
       </h2>

@@ -19,7 +19,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="!px-0 !py-8  md:flex bg-custom-bg text-gray-50">
+    <footer className="!px-0 !py-8  md:flex md:justify-around bg-custom-bg text-gray-50">
       <div className="flex justify-center items-center gap-10 ">
         <p className="caption text-n-4 lg:block">
           ©{new Date().getFullYear()} David Anuson. All rights reserved.
