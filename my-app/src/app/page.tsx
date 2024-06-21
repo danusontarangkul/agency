@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Hero from "../components/Hero";
+import Hero from "@/components/Hero";
 import Benefits from "@/components/Pricing";
 import { BentoGridDemo } from "@/components/About";
 import Footer from "@/components/Footer";

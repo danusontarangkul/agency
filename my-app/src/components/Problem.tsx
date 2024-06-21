@@ -4,7 +4,7 @@ import { BentoGrid, BentoGridItem } from "./BentoGrid";
 
 const items = [
   {
-    title: "❌ Struggling to Convert Leads?",
+    title: "❌ Struggling to Capture Leads?",
     description: (
       <p>
         Generic websites may be too slow and boring to engage your potential
@@ -31,8 +31,8 @@ const items = [
     title: "📉 Lacking Analytics to Drive Innovation?",
     description: (
       <p>
-        Without data, you may be missing out on valuable opportunities to grow
-        your business effectively.
+        Leveraging data allows you to make informed decisions and drive business
+        growth.
       </p>
     ),
     size: "large",
@@ -43,8 +43,8 @@ const items = [
     title: "🤔 No Website Yet?",
     description: (
       <p>
-        You're losing out on potential revenue, valuable client engagement, and
-        opportunities to grow your business.
+        A website helps you showcase your products and services while
+        streamlining lead generation.
       </p>
     ),
     size: "large",
