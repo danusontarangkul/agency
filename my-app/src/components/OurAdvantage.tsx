@@ -19,8 +19,8 @@ const items = [
           the sluggishness of typical website builder frameworks.
         </p>
         <img
-          src="/gauge-simple-high-solid.svg" // Replace with your actual image path
-          alt="The Digital Revolution"
+          src="/gauge-simple-high-solid.svg"
+          alt="Guage"
           width={100}
           height={100}
           className="md:hidden block m-auto mt-4"
@@ -35,8 +35,8 @@ const items = [
     size: "medium",
     header: (
       <img
-        src="/HeroImg.png" // Replace with your actual image path
-        alt="The Digital Revolution"
+        src="/speed.jpeg"
+        alt="Computer showing fast speed"
         className="w-full h-full object-cover"
       />
     ),
@@ -45,8 +45,8 @@ const items = [
     size: "medium",
     header: (
       <img
-        src="/HeroImg.png" // Replace with your actual image path
-        alt="The Digital Revolution"
+        src="/support.jpeg"
+        alt="Customer Support"
         className="w-full h-full object-cover"
       />
     ),
@@ -62,8 +62,8 @@ const items = [
           tailored to your brand’s unique needs.
         </p>
         <img
-          src="/palette-solid.svg" // Replace with your actual image path
-          alt="The Digital Revolution"
+          src="/palette-solid.svg"
+          alt="paint icon to showcase design"
           width={100}
           height={100}
           className="md:hidden block m-auto mt-4"
@@ -79,8 +79,8 @@ const items = [
         <br></br>
         <p>Need changes? Enjoy unlimited updates, hassle free.</p>
         <img
-          src="/handshake-angle-solid-1.svg" // Replace with your actual image path
-          alt="The Digital Revolution"
+          src="/handshake-angle-solid.svg"
+          alt="Handshake icon"
           width={100}
           height={100}
           className="m-auto mt-4"
@@ -95,8 +95,8 @@ const items = [
         <p className="font-bold">Insights that matter.</p> <br></br>
         <p>Regular performance reports to help you make informed decisions.</p>
         <img
-          src="/chart-line-solid-1.svg" // Replace with your actual image path
-          alt="The Digital Revolution"
+          src="/chart-line-solid.svg"
+          alt="Chart Icon"
           width={95}
           height={100}
           className="m-auto mt-4"
@@ -111,8 +111,8 @@ const items = [
         <p className="font-bold">Engineered using SEO principles.</p> <br></br>
         <p>Making it easier for users to find your content online.</p>
         <img
-          src="/magnifying-glass-solid-1.svg" // Replace with your actual image path
-          alt="The Digital Revolution"
+          src="/magnifying-glass-solid.svg" // Replace with your actual image path
+          alt="Magnifying Glass Icon"
           width={95}
           height={100}
           className="m-auto mt-4"
@@ -135,7 +135,6 @@ export function OurAdvantage() {
             title={item.title}
             description={item.description}
             header={item.header}
-            icon={item.icon}
             className={`border border-gray-300 p-4 `}
             size={item.size}
           />

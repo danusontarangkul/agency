@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="md:hidden -mt-16 rounded-lg overflow-hidden">
         <Image
           src="/HeroImg.png"
-          alt="Portrait Image"
+          alt="Neon Color Computers"
           width={550}
           height={550}
         />
@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="">
           <Image
             src="/HeroImg.png"
-            alt="Portrait Image"
+            alt="Neon Color Computers"
             width={800}
             height={600}
             layout="responsive"

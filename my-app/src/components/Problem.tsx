@@ -11,9 +11,8 @@ const items = [
         customers effectively.
       </p>
     ),
-    size: "large",
     header: "",
-    icon: "",
+    size: "large",
   },
   {
     title: "😩 Tired of Set-it-and-Forget-it Websites?",
@@ -23,9 +22,8 @@ const items = [
         evolves, making updates can feel impossible.
       </p>
     ),
-    size: "large",
     header: "",
-    icon: "",
+    size: "large",
   },
   {
     title: "📉 Lacking Analytics to Drive Innovation?",
@@ -35,9 +33,8 @@ const items = [
         growth.
       </p>
     ),
-    size: "large",
     header: "",
-    icon: "",
+    size: "large",
   },
   {
     title: "🤔 No Website Yet?",
@@ -47,9 +44,8 @@ const items = [
         streamlining lead generation.
       </p>
     ),
-    size: "large",
     header: "",
-    icon: "",
+    size: "large",
   },
 ];
 
@@ -67,7 +63,6 @@ export function Problem() {
             title={item.title}
             description={item.description}
             header={item.header}
-            icon={item.icon}
             className={`border border-gray-300 p-4 `}
             size={item.size}
           />
