@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: "David Anuson",
   description:
     "Elevate your online presence with lead-capturing websites. Hand-coded designs, monthly analytics, and updates as part of our all-inclusive service.",
+  icons: {
+    icon: ["favicon.ico?v=4"],
+    apple: ["/apple-touch-icon.png?v=4"],
+    shortcut: ["/apple-touch-icon.png"],
+  },
 };
 
 export default function RootLayout({
