@@ -73,14 +73,16 @@ const Pricing: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="px-10 pb-4">
-              <p className="text-sm">30-Day Money-Back Guarantee</p>
-              <p className="text-[.6rem]">
+            <div className="flex flex-col justify-center">
+              <p className="text-sm pb-1 text-center">
+                30-Day Money-Back Guarantee
+              </p>
+              <p className="text-[.6rem] pb-4 text-center">
                 If you're not completely satisfied within the first 30 days,
                 we'll give you a full refund.
               </p>
             </div>
-            <div className="">
+            <div>
               <Button />
             </div>
           </div>
