@@ -5,18 +5,18 @@ import Button from "./Button";
 
 const Pricing: React.FC = () => {
   return (
-    <section className="py-20 flex flex-col items-center justify-center bg-light-bg">
-      <h2 className="text-center text-4xl font-bold  text-custom-bg  ">
+    <section className="py-10 md:py-20 flex flex-col items-center justify-center bg-light-bg">
+      <h2 className="text-center font-bold  text-custom-bg text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-20">
         Pricing
       </h2>
-      <div className="mt-6  mb-6 w-[80%] mx-auto max-w-sm ">
+      <div className="mb-6 w-[80%] mx-auto max-w-sm ">
         <BackgroundGradient className=" bg-gray-50 rounded-[22px] p-4 sm:p-10  dark:bg-zinc-900 flex flex-col justify-center ">
           <div className="flex flex-col items-center text-bg-custom ">
-            <div className="">
-              <p className=" text-3xl mb-4 font-bold pl-2">
-                $99<span className="text-lg "> Per Month</span>
+            <div>
+              <p className="md:text-4xl text-3xl mb-4 font-bold pl-2">
+                $149<span className="text-lg "> Per Month</span>
               </p>
-              <div className="text-md text-bg-customwhitespace-pre-line mb-8 space-y-4 max-w-2xl pl-2">
+              <div className="text-md md:text-lg text-bg-customwhitespace-pre-line mb-8 space-y-4 max-w-2xl pl-2">
                 <div className="flex">
                   <Image
                     src="/square-check-regular.svg"
@@ -74,10 +74,10 @@ const Pricing: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm pb-1 text-center">
+              <p className="text-sm md:text-base pb-1 text-center">
                 30-Day Money-Back Guarantee
               </p>
-              <p className="text-[.6rem] pb-4 text-center">
+              <p className="text-[.6rem] md:text-[.75rem] pb-4 text-center">
                 If you're not completely satisfied within the first 30 days,
                 we'll give you a full refund.
               </p>

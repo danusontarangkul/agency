@@ -51,12 +51,12 @@ const items = [
 
 export function Problem() {
   return (
-    <div className="px-10 py-20  bg-custom-bg ">
-      <h2 className="text-gray-50 text-center font-bold text-3xl mb-6">
+    <div className="px-10 md:py-20 py-10 bg-custom-bg ">
+      <h2 className="text-gray-50 text-center font-bold text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-20">
         <span className="text-customColor2">Attention</span> Small Business
         Owners!
       </h2>
-      <BentoGrid className="max-w-xl mx-auto" rowHeight="">
+      <BentoGrid className="max-w-2xl mx-auto" rowHeight="">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}

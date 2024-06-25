@@ -84,8 +84,8 @@ const items = [
 
 export function BentoGridDemo() {
   return (
-    <div className="px-10 py-20 bg-custom-bg ">
-      <h2 className="text-gray-50 text-center font-bold text-3xl mb-6">
+    <div className="px-10 py-10 md:py-20 bg-custom-bg ">
+      <h2 className="text-gray-50 text-center font-bold text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-20">
         About Me
       </h2>
       <BentoGrid className="max-w-4xl mx-auto">
