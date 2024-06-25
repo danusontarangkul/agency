@@ -82,7 +82,7 @@ const items = [
   },
 ];
 
-export function BentoGridDemo() {
+export default function About() {
   return (
     <div className="px-10 py-10 md:py-20 bg-custom-bg ">
       <h2 className="text-gray-50 text-center font-bold text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-20">

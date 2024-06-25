@@ -49,7 +49,7 @@ const items = [
   },
 ];
 
-export function Problem() {
+export default function Problem() {
   return (
     <div className="px-10 md:py-20 py-10 bg-custom-bg ">
       <h2 className="text-gray-50 text-center font-bold text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-20">

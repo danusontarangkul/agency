@@ -3,7 +3,7 @@ import React from "react";
 
 const index = () => {
   return (
-    <div className="flex flex-col justify-center h-[100vh]  bg-custom-bg">
+    <div className="flex flex-col justify-center min-h-[100vh]  bg-custom-bg">
       <ContactForm />
     </div>
   );

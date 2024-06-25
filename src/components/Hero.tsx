@@ -11,10 +11,11 @@ const Hero = () => {
     >
       <div className="lg:hidden -mt-16 rounded-lg overflow-hidden">
         <Image
-          src="/HeroImg.png"
+          src="/HeroImg.webp"
           alt="Neon Color Computers"
           width={550}
           height={550}
+          priority
         />
       </div>
       <div className="lg:w-1/2 p-4 lg:p-14">
@@ -31,12 +32,12 @@ const Hero = () => {
       <div className="hidden lg:flex lg:w-1/2 justify-center lg:p-14">
         <div className="">
           <Image
-            src="/HeroImg.png"
+            src="/HeroImg.webp"
             alt="Neon Color Computers"
             width={800}
             height={600}
-            layout="responsive"
             className="rounded-lg overflow-hidden"
+            priority
           />
         </div>
       </div>
