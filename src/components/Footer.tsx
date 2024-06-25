@@ -9,7 +9,7 @@ const Footer = () => {
     },
     {
       id: 2,
-      img: "/Instagram.svg",
+      img: "/instagram.svg",
       link: "https://www.instagram.com/david.anuson/",
     },
     {
