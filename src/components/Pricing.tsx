@@ -6,7 +6,7 @@ import Button from "./Button";
 const Pricing: React.FC = () => {
   return (
     <section className="py-10 md:py-20 flex flex-col items-center justify-center bg-light-bg">
-      <h2 className="text-center font-bold  text-custom-bg text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-20">
+      <h2 className="text-center font-bold  text-custom-bg text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-14">
         Pricing
       </h2>
       <div className="mb-6 w-[80%] mx-auto max-w-sm ">
