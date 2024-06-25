@@ -1,6 +1,5 @@
 import { DateTime } from "luxon";
 import { NextRequest, NextResponse } from "next/server";
-import { NextApiRequest } from "next";
 import { sendTelegramMessage } from "../../../lib/telegram";
 import { authorize, appendRow } from "../../../lib/googleSheets"; // Import Google Sheets functions
 import sendEmail from "@/lib/email";
@@ -41,6 +40,6 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
   }
 };
 
-export const GET = async (request: NextApiRequest): Promise<Response> => {
-  return new Response(JSON.stringify({ status: 200 }));
+export const GET = async (req: NextRequest): Promise<NextResponse> => {
+  return NextResponse.json({ status: 200 });
 };
