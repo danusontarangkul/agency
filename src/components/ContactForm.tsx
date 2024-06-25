@@ -12,6 +12,7 @@ export interface FormValues {
   phoneNumber: E164Number | undefined;
   website: string;
   instagram: string;
+  referrer: string;
 }
 
 export function ContactForm() {
@@ -43,7 +44,7 @@ export function ContactForm() {
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     setSubmitting(true);
-
+    data.referrer = document.referrer;
     data.phoneNumber = value;
 
     try {

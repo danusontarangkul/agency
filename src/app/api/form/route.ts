@@ -9,7 +9,7 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
   try {
     const body = await req.json();
     const { firstname, lastname } = splitFullName(body.name);
-    const { email, phoneNumber, website, instagram, name } = body;
+    const { email, phoneNumber, website, instagram, name, referrer } = body;
 
     const timestamp = DateTime.now()
       .setZone("America/Los_Angeles")
@@ -24,9 +24,10 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       phoneNumber,
       website,
       instagram,
+      referrer,
     ]);
 
-    const message = `New contact form submission:\n\nName: ${name}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nWebsite: ${website}\nInstagram: ${instagram}`;
+    const message = `New contact form submission:\n\nName: ${name}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nWebsite: ${website}\nInstagram: ${instagram}\nReferrer: ${referrer}`;
     await sendEmail(body, message);
     await sendTelegramMessage(message);
 
