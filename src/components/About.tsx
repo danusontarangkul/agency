@@ -48,12 +48,13 @@ const contactDescription = (
 const items = [
   {
     header: (
-      <div className="w-full h-full object-cover rounded-xl relative">
+      <div className="w-full h-full md:min-h-0  min-h-[500px] object-cover flex items-center justify-center  rounded-xl relative">
         <Image
           src="/profile-pic.webp"
           alt="Profile picture of David"
-          width={500}
-          height={800}
+          fill
+          objectFit="cover"
+          className="rounded-xl"
         />
       </div>
     ),
@@ -75,12 +76,13 @@ const items = [
   },
   {
     header: (
-      <div className="w-full h-full object-cover rounded-xl">
+      <div className="w-full h-full md:min-h-[250px]  min-h-[500px] object-cover flex items-center justify-center  rounded-xl relative">
         <Image
           src="/profile-dog.jpg"
           alt="David with dog"
-          width={500}
-          height={500}
+          fill
+          objectFit="cover"
+          className="rounded-xl"
         />
       </div>
     ),
