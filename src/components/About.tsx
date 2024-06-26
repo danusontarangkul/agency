@@ -21,11 +21,10 @@ const aboutDescription = (
 
 const experienceDescription = (
   <ul>
-    <li>
+    <li className="mb-4">
       <strong>4+ years in web development:</strong> Extensive experience in
       creating robust, efficient, and scalable web solutions.
     </li>
-    <br />
     <li>
       <strong>3+ years in online marketing:</strong> Knowledgeable in strategies
       that drive traffic and conversions.
