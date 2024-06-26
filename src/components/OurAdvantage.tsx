@@ -32,15 +32,18 @@ const items = [
     icon: "",
   },
   {
-    size: "medium",
-    header: (
-      <Image
-        src="/speed.webp"
-        width={2560}
-        height={1080}
-        alt="Computer showing fast speed"
-        className="w-full h-full object-cover"
-      />
+    size: "medium-show",
+    title: "Top-Tier Website Optimization",
+    description: (
+      <div className="mt-8">
+        <Image
+          src="/lighthouse-100.webp"
+          width={2560}
+          height={1080}
+          alt="Computer showing fast speed"
+          className=" object-cover"
+        />
+      </div>
     ),
   },
   {

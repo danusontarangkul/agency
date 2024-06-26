@@ -43,6 +43,8 @@ export const BentoGridItem = ({
     itemClasses += " md:col-span-2 hidden md:display md:block";
   } else if (size === "large") {
     itemClasses += " md:col-span-3 ";
+  } else if (size === "medium-show") {
+    itemClasses += " md:col-span-2";
   }
 
   return (
