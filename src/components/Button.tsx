@@ -1,18 +1,13 @@
 "use client";
-// components/Button.tsx
-import React from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation"; // Import from next/navigation
+import { useRouter } from "next/navigation";
 import { logButtonClickEvent } from "../utils/googleAnalytics";
 
 const Button: React.FC = () => {
   const router = useRouter();
 
   const handleClick = () => {
-    // Log button click event to Google Analytics
     logButtonClickEvent("Get Started Button Click");
 
-    // Navigate to the /contact page using Next.js navigation methods
     router.push("/contact");
   };
 

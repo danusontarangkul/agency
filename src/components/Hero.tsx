@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Button from "./Button";
 import { AuroraBackground } from "@/components/AuroraBackground";
@@ -15,7 +14,7 @@ const Hero = () => {
           alt="Neon Color Computers"
           width={550}
           height={550}
-          priority
+          loading="eager"
         />
       </div>
       <div className="lg:w-1/2 p-4 lg:p-14">
@@ -34,10 +33,9 @@ const Hero = () => {
           <Image
             src="/HeroImg.webp"
             alt="Neon Color Computers"
-            width={800}
-            height={600}
+            width={1080}
             className="rounded-lg overflow-hidden"
-            priority
+            loading="eager"
           />
         </div>
       </div>

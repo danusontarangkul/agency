@@ -1,4 +1,3 @@
-import React from "react";
 import { BackgroundGradient } from "./BackgroundGradient";
 import Image from "next/image";
 import Button from "./Button";

@@ -22,8 +22,6 @@ export function runMiddleware(
 export async function parseBody(req: NextApiRequest, res: NextApiResponse) {
   if (req.headers["content-type"]?.includes("application/json")) {
     await runMiddleware(req, res, bodyParserJson);
-    console.log("hit middle");
-    console.log(req);
   } else if (
     req.headers["content-type"]?.includes("application/x-www-form-urlencoded")
   ) {
