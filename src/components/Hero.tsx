@@ -8,6 +8,7 @@ const Hero = () => {
       isHomePage={true}
       className="flex flex-col lg:flex-row items-center bg-custom-bg text-white text-center relative"
     >
+      {/* mobile image */}
       <div className="lg:hidden -mt-16 rounded-lg overflow-hidden">
         <Image
           src="/HeroImg.webp"
@@ -15,6 +16,7 @@ const Hero = () => {
           width={550}
           height={550}
           loading="eager"
+          priority
         />
       </div>
       <div className="lg:w-1/2 p-4 lg:p-14">
@@ -29,13 +31,17 @@ const Hero = () => {
         </div>
       </div>
       <div className="hidden lg:flex lg:w-1/2 justify-center lg:p-14">
-        <div className="">
+        <div>
+          {/* desktop image */}
           <Image
+            sizes=""
             src="/HeroImg.webp"
             alt="Neon Color Computers"
             width={1080}
+            height={1080} // Adjust height as needed
             className="rounded-lg overflow-hidden"
             loading="eager"
+            priority
           />
         </div>
       </div>

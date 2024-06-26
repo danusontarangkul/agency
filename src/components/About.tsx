@@ -1,5 +1,6 @@
 "use client";
 import { BentoGrid, BentoGridItem } from "./BentoGrid";
+import Image from "next/image";
 
 import Button from "./Button";
 
@@ -47,11 +48,14 @@ const contactDescription = (
 const items = [
   {
     header: (
-      <img
-        src="/square.jpg"
-        alt="Profile picture of David"
-        className="w-full h-full object-cover rounded-xl"
-      />
+      <div className="w-full h-full object-cover rounded-xl relative">
+        <Image
+          src="/profile-pic.webp"
+          alt="Profile picture of David"
+          width={500}
+          height={800}
+        />
+      </div>
     ),
   },
   {
@@ -71,11 +75,14 @@ const items = [
   },
   {
     header: (
-      <img
-        src="/profile-dog.jpg"
-        alt="David with dog"
-        className="w-50 h-full object-cover rounded-xl"
-      />
+      <div className="w-full h-full object-cover rounded-xl">
+        <Image
+          src="/profile-dog.jpg"
+          alt="David with dog"
+          width={500}
+          height={500}
+        />
+      </div>
     ),
   },
 ];

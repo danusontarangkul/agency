@@ -1,5 +1,6 @@
 "use client";
 import { BentoGrid, BentoGridItem } from "./BentoGrid";
+import Image from "next/image";
 
 const items = [
   {
@@ -17,7 +18,7 @@ const items = [
           Our secret? Each site is custom-coded for peak performance, avoiding
           the sluggishness of typical website builder frameworks.
         </p>
-        <img
+        <Image
           src="/gauge-simple-high-solid.svg"
           alt="Guage"
           width={100}
@@ -33,8 +34,10 @@ const items = [
   {
     size: "medium",
     header: (
-      <img
-        src="/speed.jpeg"
+      <Image
+        src="/speed.webp"
+        width={2560}
+        height={1080}
         alt="Computer showing fast speed"
         className="w-full h-full object-cover"
       />
@@ -43,8 +46,10 @@ const items = [
   {
     size: "medium",
     header: (
-      <img
-        src="/support.jpeg"
+      <Image
+        width={2560}
+        height={1080}
+        src="/support.webp"
         alt="Customer Support"
         className="w-full h-full object-cover"
       />
@@ -77,7 +82,7 @@ const items = [
         <p className="font-bold">A website that grows with you.</p>
         <br></br>
         <p>Need changes? Enjoy unlimited updates, hassle free.</p>
-        <img
+        <Image
           src="/handshake-angle-solid.svg"
           alt="Handshake icon"
           width={100}
@@ -93,7 +98,7 @@ const items = [
       <>
         <p className="font-bold">Insights that matter.</p> <br></br>
         <p>Regular performance reports to help you make informed decisions.</p>
-        <img
+        <Image
           src="/chart-line-solid.svg"
           alt="Chart Icon"
           width={95}
@@ -109,7 +114,7 @@ const items = [
       <>
         <p className="font-bold">Engineered using SEO principles.</p> <br></br>
         <p>Making it easier for users to find your content online.</p>
-        <img
+        <Image
           src="/magnifying-glass-solid.svg" // Replace with your actual image path
           alt="Magnifying Glass Icon"
           width={95}
