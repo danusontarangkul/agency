@@ -4,6 +4,7 @@ import { sendTelegramMessage } from "../../../lib/telegram";
 import { authorize, appendRow } from "../../../lib/googleSheets"; // Import Google Sheets functions
 import sendEmail from "@/lib/email";
 import { splitFullName } from "@/lib/helper";
+import { subscribeToMailchimp } from "@/lib/mailchimp";
 
 export const POST = async (req: NextRequest): Promise<NextResponse> => {
   try {
@@ -30,6 +31,7 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
     const message = `New contact form submission:\n\nName: ${name}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nWebsite: ${website}\nInstagram: ${instagram}\nReferrer: ${referrer}`;
     await sendEmail(body, message);
     await sendTelegramMessage(message);
+    await subscribeToMailchimp(firstname, lastname, email, phoneNumber);
 
     return NextResponse.json({ status: "success" }, { status: 200 });
   } catch (error) {
