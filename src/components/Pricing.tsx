@@ -61,14 +61,42 @@ const Pricing: React.FC = () => {
                   />
                   <p className="pl-1.5">SEO Optimized</p>
                 </div>
+                <p className="font-semibold underline">Bonus Integrations</p>
                 <div className="flex">
                   <Image
-                    src="/square-check-regular.svg"
+                    src="/circle-check-solid.svg"
                     width={20}
                     height={20}
                     alt="check"
                   />
-                  <p className="pl-1.5">Analytics</p>
+                  <p className="pl-1.5">Google Analytics</p>
+                </div>
+                <div className="flex">
+                  <Image
+                    src="/circle-check-solid.svg"
+                    width={20}
+                    height={20}
+                    alt="check"
+                  />
+                  <p className="pl-1.5">Google Sheets</p>
+                </div>
+                <div className="flex">
+                  <Image
+                    src="/circle-check-solid.svg"
+                    width={20}
+                    height={20}
+                    alt="check"
+                  />
+                  <p className="pl-1.5">Telegram</p>
+                </div>
+                <div className="flex">
+                  <Image
+                    src="/circle-check-solid.svg"
+                    width={20}
+                    height={20}
+                    alt="check"
+                  />
+                  <p className="pl-1.5">MailChimp</p>
                 </div>
               </div>
             </div>
