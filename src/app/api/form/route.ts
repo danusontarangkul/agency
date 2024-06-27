@@ -17,21 +17,25 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       .toFormat("MMMM dd, yyyy HH:mm a");
 
     const auth = await authorize();
-    await appendRow(auth, [
-      timestamp,
-      firstname,
-      lastname,
-      email,
-      phoneNumber,
-      website,
-      instagram,
-      referrer,
-    ]);
-
     const message = `New contact form submission:\n\nName: ${name}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nWebsite: ${website}\nInstagram: ${instagram}\nReferrer: ${referrer}`;
-    await sendEmail(body, message);
-    await sendTelegramMessage(message);
-    await subscribeToMailchimp(firstname, lastname, email, phoneNumber);
+
+    const tasks = [
+      appendRow(auth, [
+        timestamp,
+        firstname,
+        lastname,
+        email,
+        phoneNumber,
+        website,
+        instagram,
+        referrer,
+      ]),
+      sendEmail(body, message),
+      sendTelegramMessage(message),
+      subscribeToMailchimp(firstname, lastname, email, phoneNumber),
+    ];
+
+    await Promise.all(tasks);
 
     return NextResponse.json({ status: "success" }, { status: 200 });
   } catch (error) {

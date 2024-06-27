@@ -53,7 +53,7 @@ const items = [
           src="/profile-pic.webp"
           alt="Profile picture of David"
           fill
-          objectFit="cover"
+          style={{ objectFit: "cover" }}
           className="rounded-xl"
         />
       </div>
@@ -81,7 +81,7 @@ const items = [
           src="/profile-dog.jpg"
           alt="David with dog"
           fill
-          objectFit="cover"
+          style={{ objectFit: "cover" }}
           className="rounded-xl"
         />
       </div>
