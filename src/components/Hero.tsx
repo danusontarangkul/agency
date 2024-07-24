@@ -21,9 +21,9 @@ const Hero = () => {
       </div>
       <div className="lg:w-1/2 p-4 lg:p-14">
         <h1 className="md:text-5xl lg:text-6xl text-4xl font-bold mb-4 text-gray-50">
-          Next-Generation Websites Designed to{" "}
+          Personalized Websites for{" "}
           <span className="bg-gradient-to-r from-customColor1 to-customColor2 text-transparent bg-clip-text">
-            Capture Leads
+            Personal Brands
           </span>
         </h1>
         <div className="flex justify-center">

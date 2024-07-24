@@ -3,11 +3,12 @@ import { BentoGrid, BentoGridItem } from "./BentoGrid";
 
 const items = [
   {
-    title: "❌ Struggling to Capture Leads?",
+    title: "❌ Using Generic Websites?",
     description: (
       <p>
-        Generic websites may be too slow and boring to engage your potential
-        customers effectively.
+        Your potential customers can spot that a mile away, causing them to be
+        disengage in your services. Your website should be authentic to your
+        brand.
       </p>
     ),
     header: "",
@@ -25,7 +26,7 @@ const items = [
     size: "large",
   },
   {
-    title: "📉 Lacking Analytics to Drive Innovation?",
+    title: "📉 Lacking Analytics to Drive Sales",
     description: (
       <p>
         Leveraging data allows you to make informed decisions and drive business
@@ -52,8 +53,7 @@ export default function Problem() {
   return (
     <div className="px-10 md:py-20 py-10 bg-custom-bg ">
       <h2 className="text-gray-50 text-center font-bold text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-20">
-        <span className="text-customColor2">Attention</span> Small Business
-        Owners!
+        <span className="text-customColor2">Attention</span> Personal Brands!
       </h2>
       <BentoGrid className="max-w-2xl mx-auto" rowHeight="">
         {items.map((item, i) => (
