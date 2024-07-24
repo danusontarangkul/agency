@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 import { BentoGrid, BentoGridItem } from "./BentoGrid";
 
 const items = [
@@ -51,31 +50,21 @@ const items = [
 ];
 
 export default function Problem() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
   return (
-    <div className="px-10 md:py-20 py-10 bg-custom-bg ">
+    <div className="px-10 md:py-20 py-10 bg-custom-bg">
       <h2 className="text-gray-50 text-center font-bold text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-20">
         <span className="text-customColor2">Attention</span> Personal Brands!
       </h2>
       <div className="flex flex-col md:flex-row-reverse justify-evenly">
         <div className="flex justify-center mb-8 md:mb-0">
-          {isClient ? (
-            <video
-              className=" h-[600px]"
-              controls
-              poster="/videos/intro-thumbnail.webp"
-            >
-              <source src={"/videos/Intro.mp4"} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <div className="h-[600px] bg-gray-200"></div> // Placeholder to maintain layout
-          )}
+          <iframe
+            className="h-[530px]"
+            src="https://www.youtube.com/embed/46nnLoKkI_k?autoplay=0"
+            title="Introduction Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
         <div className="w-full md:w-1/2">
           <BentoGrid className="" rowHeight="">
@@ -85,7 +74,7 @@ export default function Problem() {
                 title={item.title}
                 description={item.description}
                 header={item.header}
-                className={`border border-gray-300 p-4 `}
+                className={`border border-gray-300 p-4`}
                 size={item.size}
               />
             ))}
