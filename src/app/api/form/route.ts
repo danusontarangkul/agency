@@ -32,7 +32,7 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       ]),
       sendEmail(body, message),
       sendTelegramMessage(message),
-      subscribeToMailchimp(firstname, lastname, email, phoneNumber),
+      // subscribeToMailchimp(firstname, lastname, email, phoneNumber),
     ];
 
     await Promise.all(tasks);
