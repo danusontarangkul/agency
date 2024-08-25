@@ -13,7 +13,7 @@ const Pricing: React.FC = () => {
           <div className="flex flex-col items-center text-bg-custom ">
             <div>
               <p className="md:text-4xl text-3xl mb-4 font-bold pl-2">
-                $149<span className="text-lg "> Per Month</span>
+                $100<span className="text-lg "> Per Month</span>
               </p>
               <div className="text-md md:text-lg text-bg-customwhitespace-pre-line mb-8 space-y-4 max-w-2xl pl-2">
                 <div className="flex">
