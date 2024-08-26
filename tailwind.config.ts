@@ -34,10 +34,20 @@ module.exports = {
         customColor3: "#6aa0c3",
         customColor4: "#6d44a0",
       },
+      perspective: {
+        1000: "1000px", // Adding perspective utility
+      },
+      transformStyle: {
+        "3d": "preserve-3d", // Adding transform-style utility
+      },
+      backfaceVisibility: {
+        hidden: "hidden", // Adding backface-visibility utility
+      },
     },
   },
 
   plugins: [
+    require("tailwindcss-3d")({ legacy: true }),
     // Add the bg-dot-thick utility plugin
     function ({ matchUtilities, theme }: any) {
       matchUtilities(

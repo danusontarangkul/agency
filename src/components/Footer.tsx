@@ -28,7 +28,7 @@ const Footer = () => {
   ];
   return (
     <footer className="!px-0 !py-8  md:flex md:justify-around bg-custom-bg text-gray-50">
-      <div className="flex items-center justify-center md:gap-3 gap-6 mt-3">
+      <div className="flex items-center justify-center md:gap-3 gap-6 mt-3 mb-3 md:mb-0">
         {socialMedia.map((info) => (
           <div
             key={info.id}
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col justify-center items-center gap-8 ">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-8 ">
         <div className="flex items-center space-x-2 mt-1">
           <button
             onClick={termsModal.toggleModal}

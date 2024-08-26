@@ -6,6 +6,7 @@ const Problem = dynamic(() => import("@/components/Problem") as any);
 const About = dynamic(() => import("@/components/About") as any);
 const OurAdvantage = dynamic(() => import("@/components/OurAdvantage") as any);
 const Pricing = dynamic(() => import("@/components/Pricing") as any);
+const Showcase = dynamic(() => import("../components/Showcase") as any);
 const Footer = dynamic(() => import("@/components/Footer")) as any;
 
 export default function Home() {
@@ -18,6 +19,8 @@ export default function Home() {
       <About />
       <Border />
       <OurAdvantage />
+      <Border />
+      <Showcase />
       <Pricing />
       <Footer />
     </main>
