@@ -13,7 +13,7 @@ export default function Showcase() {
             key={data.title}
             title={data.title}
             screenshot={data.screenshot}
-            videoSource={data.videoSource}
+            youTubeId={data.youTubeId}
             link={data.link}
             poster={data.poster}
           />
