@@ -10,8 +10,7 @@ export interface FormValues {
   name: string;
   email: string;
   phoneNumber: E164Number | undefined;
-  website: string;
-  instagram: string;
+  message: string;
   referrer: string;
 }
 
@@ -27,17 +26,6 @@ export function ContactForm() {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const validateWebsite = (value: string) => {
-    if (!value) return true;
-    const urlRegex =
-      /^(https?:\/\/)?(www\.)?([a-zA-Z0-9-]+)\.([a-zA-Z]{2,})(\/\S*)?$/;
-    if (!urlRegex.test(value)) {
-      return false;
-    }
-
-    return true;
-  };
-
   const validatePhoneNumber = () => {
     return value ? isValidPhoneNumber(value as string) : false;
   };
@@ -49,14 +37,11 @@ export function ContactForm() {
 
     try {
       const response = await axios.post("/api/form", data, {
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
       });
 
-      if (response.status !== 200) {
+      if (response.status !== 200)
         throw new Error("Network response was not ok");
-      }
 
       setSubmitSuccess(true);
       setSubmitError(null);
@@ -77,7 +62,7 @@ export function ContactForm() {
   return (
     <div className="max-w-md w-90 mx-auto rounded-2xl p-6 md:p-8 shadow-input bg-white dark:bg-black my-16 ">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Let's Grow Together
+        Let's Work Together
       </h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
         Fill out the form below, and we'll be in touch soon.
@@ -86,6 +71,7 @@ export function ContactForm() {
       <form className="my-8" onSubmit={handleSubmit(onSubmit)}>
         {!submitSuccess && (
           <>
+            {/* Name */}
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
               <div className="flex flex-col w-full">
                 <label
@@ -106,6 +92,8 @@ export function ContactForm() {
                 )}
               </div>
             </div>
+
+            {/* Email */}
             <div className="flex flex-col w-full mb-4">
               <label
                 htmlFor="email"
@@ -124,6 +112,8 @@ export function ContactForm() {
                 <span className="text-red-500 pt-1">Email is required</span>
               )}
             </div>
+
+            {/* Phone */}
             <div className="flex flex-col w-full mb-4">
               <label
                 htmlFor="phoneNumber"
@@ -141,9 +131,7 @@ export function ContactForm() {
                   required: true,
                   validate: validatePhoneNumber,
                 })}
-                onChange={(value) => {
-                  setValue(value as E164Number);
-                }}
+                onChange={(val) => setValue(val as E164Number)}
                 value={value}
                 onBlur={() => setValue(value as E164Number)}
               />
@@ -153,42 +141,28 @@ export function ContactForm() {
                 </span>
               )}
             </div>
+
+            {/* Message */}
             <div className="flex flex-col w-full mb-4">
               <label
-                htmlFor="website"
+                htmlFor="message"
                 className="font-semibold text-neutral-700 dark:text-neutral-300"
               >
-                Current Website
+                Brief overview of what you are looking for:
+                <span className="text-red-500"> *</span>
               </label>
-              <input
-                id="website"
-                placeholder="www.davidanuson.com"
-                type="string"
-                {...register("website", {
-                  validate: validateWebsite,
-                })}
-                className="input1 w-full h-10 px-3 mt-1 rounded-md shadow-input focus:outline-none focus:ring-2 focus:ring-neutral-400 dark:focus:ring-neutral-600 dark:bg-zinc-800"
+              <textarea
+                id="message"
+                placeholder="Description."
+                rows={5}
+                {...register("message", { required: true, minLength: 10 })}
+                className="input1 w-full px-3 py-2 mt-1 rounded-md shadow-input focus:outline-none focus:ring-2 focus:ring-neutral-400 dark:focus:ring-neutral-600 dark:bg-zinc-800"
               />
-              {errors.website && (
+              {errors.message && (
                 <span className="text-red-500 pt-1">
-                  Please enter valid website
+                  Please provide a short description of your project.
                 </span>
               )}
-            </div>
-            <div className="flex flex-col w-full mb-4">
-              <label
-                htmlFor="instagram"
-                className="font-semibold text-neutral-700 dark:text-neutral-300"
-              >
-                Business Instagram Handle
-              </label>
-              <input
-                id="instagram"
-                placeholder="@davidanuson"
-                type="text"
-                {...register("instagram")}
-                className="input1 w-full h-10 px-3 mt-1 rounded-md shadow-input focus:outline-none focus:ring-2 focus:ring-neutral-400 dark:focus:ring-neutral-600 dark:bg-zinc-800"
-              />
             </div>
 
             {submitError && (
@@ -220,16 +194,6 @@ export function ContactForm() {
             <p className="text-customColor1 font-semibold mt-4 mb-2">
               Submission successful!
             </p>
-            <p className="text-neutral-600 text-sm mt-2 mb-2 dark:text-neutral-300">
-              Schedule a meeting with us:
-            </p>
-            <iframe
-              src="https://calendly.com/david-anuson"
-              width="100%"
-              height="410px"
-              title="Schedule Meeting"
-              className="mb-4 border border-gray-300"
-            ></iframe>
             <button
               className="bg-customColor1 text-white rounded-md py-2 px-4 hover:bg-customColor3 transition duration-300"
               onClick={handleGoBack}

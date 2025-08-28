@@ -2,23 +2,26 @@
 import { useRouter } from "next/navigation";
 import { logButtonClickEvent } from "../utils/googleAnalytics";
 
-const Button: React.FC = () => {
+interface ButtonProps {
+  label?: string;
+}
+
+const Button: React.FC<ButtonProps> = ({ label = "Dev Services" }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    logButtonClickEvent("Get Started Button Click");
-
+    logButtonClickEvent(`${label} Button Click`);
     router.push("/contact");
   };
 
   return (
-    <div className="p-[3px] relative h-14 w-full max-w-[250px]">
+    <div
+      onClick={handleClick}
+      className="p-[3px] relative h-14 w-full max-w-[250px] cursor-pointer hover:opacity-80 transition duration-200"
+    >
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-      <div
-        onClick={handleClick}
-        className="px-6 py-3 bg-black rounded-[6px] relative group transition duration-200 hover:bg-transparent h-full flex items-center justify-center cursor-pointer"
-      >
-        <span className="text-xl text-gray-50">Get Started</span>
+      <div className="px-6 py-3 rounded-[6px] relative h-full flex items-center justify-center">
+        <span className="text-xl text-gray-50">{label}</span>
       </div>
     </div>
   );

@@ -4,19 +4,16 @@ import Image from "next/image";
 
 const items = [
   {
-    title: "⚡️ Fast Loading Times",
+    title: "⚡️ Built for Performance",
     description: (
       <>
         <p>
-          <strong>
-            Quick page loads result in higher Google rankings and improved user
-            satisfaction.
-          </strong>{" "}
+          <strong>Fast, reliable apps that scale with your business.</strong>{" "}
         </p>
         <br></br>
         <p>
-          Our secret? Each site is custom-coded for peak performance, avoiding
-          the sluggishness of typical website builder frameworks.
+          Every application is custom-coded with efficiency in mind—no bloated
+          templates or unnecessary frameworks slowing you down.{" "}
         </p>
         <Image
           src="/gauge-simple-high-solid.svg"
@@ -79,12 +76,16 @@ const items = [
     ),
   },
   {
-    title: "💡 Ongoing Support",
+    title: "💡 Flexible Feature Development",
     description: (
       <>
-        <p className="font-bold">A website that grows with you.</p>
+        <p className="font-bold">Your app evolves with your business.</p>
         <br></br>
-        <p>Need changes? Enjoy unlimited updates, hassle free.</p>
+        <p>
+          {" "}
+          Need a new feature? We can add functionality anytime without
+          rebuilding from scratch.
+        </p>
         <Image
           src="/handshake-angle-solid.svg"
           alt="Handshake icon"
@@ -96,11 +97,15 @@ const items = [
     ),
   },
   {
-    title: "📊  Monthly Analytics",
+    title: "🛠️ Reliable Maintenance & Support",
     description: (
       <>
-        <p className="font-bold">Insights that matter.</p> <br></br>
-        <p>Regular performance reports to help you make informed decisions.</p>
+        <p className="font-bold">No more fighting bugs alone.</p> <br></br>
+        <p>
+          {" "}
+          Get ongoing support and updates so your app stays secure, efficient,
+          and problem-free.
+        </p>
         <Image
           src="/chart-line-solid.svg"
           alt="Chart Icon"
@@ -112,11 +117,15 @@ const items = [
     ),
   },
   {
-    title: "🌐 SEO Optimized",
+    title: "🔒 Security First",
     description: (
       <>
-        <p className="font-bold">Engineered using SEO principles.</p> <br></br>
-        <p>Making it easier for users to find your content online.</p>
+        <p className="font-bold">Protect your data and your users.</p> <br></br>
+        <p>
+          {" "}
+          Every custom app is built with modern security practices, ensuring
+          peace of mind as your business grows.
+        </p>
         <Image
           src="/magnifying-glass-solid.svg" // Replace with your actual image path
           alt="Magnifying Glass Icon"

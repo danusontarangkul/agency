@@ -1,38 +1,58 @@
 import { DateTime } from "luxon";
 import { NextRequest, NextResponse } from "next/server";
 import { sendTelegramMessage } from "../../../lib/telegram";
-import { authorize, appendRow } from "../../../lib/googleSheets"; // Import Google Sheets functions
+import { authorize, appendRow } from "../../../lib/googleSheets";
 import sendEmail from "@/lib/email";
 import { splitFullName } from "@/lib/helper";
-import { subscribeToMailchimp } from "@/lib/mailchimp";
 
 export const POST = async (req: NextRequest): Promise<NextResponse> => {
   try {
     const body = await req.json();
-    const { firstname, lastname } = splitFullName(body.name);
-    const { email, phoneNumber, website, instagram, name, referrer } = body;
+
+    // Extract fields from new form
+    const name: string = body.name ?? "";
+    const { firstname, lastname } = splitFullName(name);
+    const email: string = body.email ?? "";
+    const phoneNumber: string = body.phoneNumber ?? "";
+    const messageText: string = body.message ?? "";
+    // Prefer client-provided referrer, fallback to header
+    const referrer: string =
+      body.referrer ??
+      req.headers.get("referer") ??
+      req.headers.get("referrer") ??
+      "";
 
     const timestamp = DateTime.now()
       .setZone("America/Los_Angeles")
-      .toFormat("MMMM dd, yyyy HH:mm a");
+      .toFormat("MMMM dd, yyyy hh:mm a");
 
     const auth = await authorize();
-    const message = `New contact form submission:\n\nName: ${name}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nWebsite: ${website}\nInstagram: ${instagram}\nReferrer: ${referrer}`;
+
+    const notification = [
+      "New contact form submission:",
+      "",
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone Number: ${phoneNumber}`,
+      `Referrer: ${referrer}`,
+      "",
+      "Message:",
+      messageText,
+    ].join("\n");
 
     const tasks = [
+      // Append to your sheet with the new columns
       appendRow(auth, [
         timestamp,
         firstname,
         lastname,
         email,
         phoneNumber,
-        website,
-        instagram,
+        messageText,
         referrer,
       ]),
-      sendEmail(body, message),
-      sendTelegramMessage(message),
-      // subscribeToMailchimp(firstname, lastname, email, phoneNumber),
+      sendEmail(body, notification),
+      sendTelegramMessage(notification),
     ];
 
     await Promise.all(tasks);
@@ -41,12 +61,12 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
   } catch (error) {
     console.error("Error in form entry", error);
     return NextResponse.json(
-      { status: "error", error: error as Error },
+      { status: "error", error: (error as Error)?.message ?? "unknown" },
       { status: 500 }
     );
   }
 };
 
-export const GET = async (req: NextRequest): Promise<NextResponse> => {
+export const GET = async (_req: NextRequest): Promise<NextResponse> => {
   return NextResponse.json({ status: 200 });
 };
