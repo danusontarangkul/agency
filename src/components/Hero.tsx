@@ -10,14 +10,15 @@ const Hero = () => {
       className="flex flex-col lg:flex-row items-center bg-custom-bg text-white text-center relative"
     >
       {/* mobile image */}
-      <div className="lg:hidden mt-4 rounded-full overflow-hidden">
+      <div className="lg:hidden mt-4  md:mt-4 rounded-lg overflow-hidden">
         <Image
-          src="/profile.webp"
-          alt="Profile Picture"
+          src="/HeroImg.webp"
+          alt="Hero Image"
           width={400}
           height={400}
           loading="eager"
           priority
+          className="rounded-lg overflow-hidden"
         />
       </div>
       <div className="lg:w-1/2 p-4 lg:p-14">
@@ -32,16 +33,16 @@ const Hero = () => {
           <SecondaryButton />
         </div>
       </div>
-      <div className="hidden lg:flex lg:w-1/2 justify-center lg:p-14">
+      <div className="hidden lg:flex lg:w-1/2 justify-center lg:p-14 rounded-lg">
         <div>
           {/* desktop image */}
           <Image
             sizes=""
-            src="/profile.webp"
-            alt="Profile Picture"
+            src="/HeroImg.webp"
+            alt="Hero Image"
             width={1080}
             height={1080} // Adjust height as needed
-            className="rounded-full overflow-hidden"
+            className="rounded-lg overflow-hidden"
             loading="eager"
             priority
           />
