@@ -5,7 +5,7 @@ export default function Showcase() {
   return (
     <div className="px-10 py-10 md:py-20  bg-custom-bg ">
       <h2 className="text-gray-50 text-center font-bold text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-20">
-        Showcase
+        Website Projects
       </h2>
       <div className="flex flex-col  md:flex-row md:flex-wrap md:justify-evenly items-center md:items-start space-2">
         {showCaseData.map((data) => (

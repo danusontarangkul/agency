@@ -14,15 +14,16 @@ export default function Home() {
     <main>
       <Hero />
       <Border />
-      <Problem />
+      {/* <Problem />
+      <Border /> */}
+      <Showcase />
       <Border />
       <About />
-      <Border />
-      <OurAdvantage />
-      <Border />
-      <Showcase />
-      <Pricing />
-      <Footer />
+      {/* <OurAdvantage />
+      <Border /> */}
+
+      {/* <Pricing /> */}
+      {/* <Footer /> */}
     </main>
   );
 }

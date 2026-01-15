@@ -4,19 +4,21 @@ import Image from "next/image";
 
 import Button from "./Button";
 
-const aboutDescription = (
-  <>
-    🔥 <strong>Passionate Web Developer</strong>: Focused on the business
-    aspects of websites.
-    <br />
-    <br />
-    🚀 <strong>Mission-Driven</strong>: Delivering enterprise-level coding to
-    small businesses.
-    <br />
-    <br />
-    🎯 <strong>Goal-Oriented</strong>: Convert your leads with high-performing,
-    custom-built websites.
-  </>
+const educationDescription = (
+  <ul>
+    <li className="mb-3">
+      <strong>Western Governors University</strong> — Bachelor of Science in
+      Computer Science
+    </li>
+    <li className="mb-3">
+      <strong>University of California, Berkeley Extension</strong> — Coding
+      Bootcamp
+    </li>
+    <li className="mb-3">
+      <strong>University of Florida</strong> — Master in International Business
+      & Bachelor of Science in Finance
+    </li>
+  </ul>
 );
 
 const experienceDescription = (
@@ -26,17 +28,16 @@ const experienceDescription = (
       creating robust, efficient, and scalable web solutions.
     </li>
     <li>
-      <strong>3+ years in online marketing:</strong> Knowledgeable in strategies
-      that drive traffic and conversions.
+      <strong>Enterprise and startup experience:</strong> Comfortable working
+      with large, long-lived codebases as well as fast-moving, early-stage
+      products.
     </li>
   </ul>
 );
 
 const contactDescription = (
   <div className="flex flex-col items-center md:mt-2 justify-evenly">
-    <p className="mb-2 text-lg">
-      💬 Free consultation call to get you started.
-    </p>
+    <p className="mb-2 text-lg">💬 Let's connect.</p>
     <Button label="Contact" />
     <div className="md:text-lg font-semibold mb-1 flex flex-col md:flex-row md:items-center w-full md:justify-evenly mt-10 align-middle md:pl-0 pl-4">
       <p className="mb-3 sm:mb-0">📱 (305) 613-4423</p>
@@ -50,7 +51,7 @@ const items = [
     header: (
       <div className="w-full h-full md:min-h-0  min-h-[500px] object-cover flex items-center justify-center  rounded-xl relative">
         <Image
-          src="/profile-pic.webp"
+          src="/profile.jpeg"
           alt="Profile picture of David"
           fill
           style={{ objectFit: "cover" }}
@@ -60,16 +61,17 @@ const items = [
     ),
   },
   {
-    description: aboutDescription,
-  },
-  {
     title: "👨‍💻 Experience & Expertise",
     description: experienceDescription,
   },
   {
+    title: "🎓 Education",
+    description: educationDescription,
+  },
+  {
     title: (
       <p className="text-custom-bg md:text-3xl">
-        Let's talk about your website goals
+        Actively seeking my next role
       </p>
     ),
     description: contactDescription,

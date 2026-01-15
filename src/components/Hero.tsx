@@ -12,8 +12,8 @@ const Hero = () => {
       {/* mobile image */}
       <div className="lg:hidden mt-4  md:mt-4 rounded-lg overflow-hidden">
         <Image
-          src="/HeroImg.webp"
-          alt="Hero Image"
+          src="/profile-pic.webp"
+          alt="Profile Picture"
           width={400}
           height={400}
           loading="eager"
@@ -22,14 +22,17 @@ const Hero = () => {
         />
       </div>
       <div className="lg:w-1/2 p-4 lg:p-14">
-        <h1 className="md:text-5xl lg:text-6xl text-4xl font-bold  bg-gradient-to-r from-customColor1 to-customColor2 text-transparent bg-clip-text">
-          From Idea to Working Software
+        <h1
+          className="md:text-5xl lg:text-6xl text-4xl font-bold leading-normal
+
+"
+        >
+          Software Engineer
         </h1>
-        <p className="text-xl my-2">
-          Custom Apps for Businesses, Guidance for Aspiring Devs{" "}
-        </p>
+
+        <p className="text-xl my-2">Open to full-time opportunities </p>
         <div className="flex justify-center gap-4 mt-8">
-          <Button />
+          <Button label="Contact" />
           <SecondaryButton />
         </div>
       </div>
@@ -38,8 +41,8 @@ const Hero = () => {
           {/* desktop image */}
           <Image
             sizes=""
-            src="/HeroImg.webp"
-            alt="Hero Image"
+            src="/profile-pic.webp"
+            alt="Profile Picture"
             width={1080}
             height={1080} // Adjust height as needed
             className="rounded-lg overflow-hidden"
