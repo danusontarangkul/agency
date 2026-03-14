@@ -2,6 +2,8 @@
 
 A modern portfolio and agency website built with Next.js. Showcases projects, skills, and services with lead-capturing features, contact forms, and integrations for email, analytics, and newsletters.
 
+![Screenshot](public/screenshot.png)
+
 ## Deployment
 
 www.davidanuson.com
