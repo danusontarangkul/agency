@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Agency
+
+A modern portfolio and agency website built with Next.js. Showcases projects, skills, and services with lead-capturing features, contact forms, and integrations for email, analytics, and newsletters.
+
+## Deployment
+
+www.davidanuson.com
+
+## Description
+
+This is a hand-coded agency/portfolio site that highlights work samples, skills, and offerings. It includes a hero section, project gallery, showcase with video previews, skills section, and about content. The site supports contact forms, Mailchimp newsletter signup, Google Analytics, and optional integrations (Google Sheets, Telegram, Nodemailer) for form handling and lead capture.
+
+## Tech Stack
+
+| Category                                                       | Technologies                                   |
+| -------------------------------------------------------------- | ---------------------------------------------- |
+| **Framework**                                                  | [Next.js](https://nextjs.org/) 14 (App Router) |
+| **Language**                                                   | TypeScript                                     |
+| **Styling**                                                    | Tailwind CSS, custom CSS                       |
+| **Animation**                                                  | Framer Motion                                  |
+| **Icons**                                                      | Font Awesome                                   |
+| **Forms**                                                      | React Hook Form, react-phone-number-input      |
+| **UI**                                                         | Radix UI (Label), clsx, tailwind-merge         |
+| **Integrations** Nodemailer, Google APIs (Sheets, Auth), Axios |
+| **Utilities**                                                  | Luxon, libphonenumber-js, sharp (images)       |
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+
+### Install & run
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser. Edit `src/app/page.tsx` and components to customize; the dev server hot-reloads on save.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build & start
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build
+npm start
+```
+
+### Lint
+
+```bash
+npm run lint
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Framer Motion](https://www.framer.com/motion/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👥 Contributors
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **David anusontarangkul** - [github.com/danusontarangkul](https://github.com/danusontarangkul)
