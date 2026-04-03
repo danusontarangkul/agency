@@ -1,20 +1,32 @@
+import Image from "next/image";
+
+type Project = {
+  title: string;
+  description: string;
+  tech: string[];
+  image: string;
+  link: string;
+  github?: string;
+};
+
 export default function Projects() {
-  const projects = [
+  const projects: Project[] = [
     {
-      title: "Event Management SaaS",
+      title: "Nexus Auto",
       description:
-        "A full-stack SaaS platform for managing events, ticket sales, guest lists, and SMS campaigns. Built with scalability and real-world business workflows in mind.",
-      tech: ["Next.js", "TypeScript", "Stripe", "Convex", "Tailwind"],
-      image: "https://via.placeholder.com/800x500",
-      link: "#",
+        "A mobile app for car owners to keep track of their car's maintenance and repairs.",
+      tech: ["React Native", "TypeScript", "Convex", "Expo", "Tailwind"],
+      image: "/Nexus-Auto-Cover.png",
+      link: "https://apps.apple.com/us/app/nexus-auto/id6760922713",
+      github: "https://github.com/danusontarangkul/nexus-auto",
     },
     {
-      title: "Move Booking Platform",
+      title: "Hostly",
       description:
-        "A logistics-focused application that handles move bookings, pricing rules, customer management, and internal dashboards for operations teams.",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      image: "https://via.placeholder.com/800x500",
-      link: "#",
+        "A full-stack SaaS platform for managing events, ticket sales, guest lists, and SMS campaigns.",
+      tech: ["Next.js", "TypeScript", "Stripe", "Convex", "Tailwind"],
+      image: "/Hostly-Cover.png",
+      link: "https://www.hostlyapp.com/",
     },
   ];
 
@@ -31,11 +43,13 @@ export default function Projects() {
             className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg flex flex-col"
           >
             {/* Image */}
-            <div className="w-full h-56 md:h-64">
-              <img
+            <div className="relative w-full h-64">
+              <Image
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
               />
             </div>
 
@@ -62,12 +76,26 @@ export default function Projects() {
               </div>
 
               {/* CTA */}
-              <a
-                href={project.link}
-                className="mt-auto inline-block text-center rounded-lg bg-indigo-600 hover:bg-indigo-500 transition text-white font-medium py-2 px-4"
-              >
-                View Project
-              </a>
+              <div className="mt-auto flex flex-col sm:flex-row gap-3">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center rounded-lg bg-indigo-600 hover:bg-indigo-500 transition text-white font-medium py-2 px-4"
+                >
+                  View Project
+                </a>
+                {project.github ? (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center rounded-lg border border-indigo-500/70 text-indigo-300 hover:bg-indigo-500/10 transition font-medium py-2 px-4"
+                  >
+                    View Code
+                  </a>
+                ) : null}
+              </div>
             </div>
           </div>
         ))}

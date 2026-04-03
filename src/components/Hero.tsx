@@ -45,6 +45,7 @@ const Hero = () => {
             alt="Profile Picture"
             width={1080}
             height={1080} // Adjust height as needed
+            style={{ width: "400px", height: "500px" }}
             className="rounded-lg overflow-hidden"
             loading="eager"
             priority

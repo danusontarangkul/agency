@@ -5,11 +5,7 @@ const ResumeButton: React.FC = () => {
   const handleClick = () => {
     logButtonClickEvent("Resume Button Click");
 
-    window.open(
-      "/Resume-David-Anusontarangkul.pdf",
-      "_blank",
-      "noopener,noreferrer"
-    );
+    window.open("/Canva-Resume.pdf", "_blank", "noopener,noreferrer");
   };
 
   return (

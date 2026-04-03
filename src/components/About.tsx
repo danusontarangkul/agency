@@ -41,7 +41,7 @@ const contactDescription = (
     <Button label="Contact" />
     <div className="md:text-lg font-semibold mb-1 flex flex-col md:flex-row md:items-center w-full md:justify-evenly mt-10 align-middle md:pl-0 pl-4">
       <p className="mb-3 sm:mb-0">📱 (305) 613-4423</p>
-      <p>✉️ david.anuson@gmail.com</p>
+      <p>✉️ davidanusontarangkul@gmail.com</p>
     </div>
   </div>
 );

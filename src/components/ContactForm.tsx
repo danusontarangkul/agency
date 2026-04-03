@@ -48,7 +48,7 @@ export function ContactForm() {
     } catch (error) {
       console.error("API Error:", error);
       setSubmitError(
-        "There was an error submitting your form. Please try again later."
+        "There was an error submitting your form. Please try again later.",
       );
     } finally {
       setSubmitting(false);
@@ -103,7 +103,7 @@ export function ContactForm() {
               </label>
               <input
                 id="email"
-                placeholder="david.anuson@gmail.com"
+                placeholder="anusontarangkul@gmail.com"
                 type="email"
                 {...register("email", { required: true })}
                 className="input1 w-full h-10 px-3 mt-1 rounded-md shadow-input focus:outline-none focus:ring-2 focus:ring-neutral-400 dark:focus:ring-neutral-600 dark:bg-zinc-800"
