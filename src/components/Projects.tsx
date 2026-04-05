@@ -4,7 +4,8 @@ type Project = {
   title: string;
   description: string;
   tech: string[];
-  image: string;
+  image?: string;
+  youtubeVideoId?: string;
   link: string;
   github?: string;
 };
@@ -18,6 +19,7 @@ export default function Projects() {
       tech: ["React Native", "TypeScript", "Convex", "Expo", "Tailwind"],
       image: "/Nexus-Auto-Cover.png",
       link: "https://apps.apple.com/us/app/nexus-auto/id6760922713",
+      youtubeVideoId: "FgW4kt58pc4",
       github: "https://github.com/danusontarangkul/nexus-auto",
     },
     {
@@ -25,7 +27,7 @@ export default function Projects() {
       description:
         "A full-stack SaaS platform for managing events, ticket sales, guest lists, and SMS campaigns.",
       tech: ["Next.js", "TypeScript", "Stripe", "Convex", "Tailwind"],
-      image: "/Hostly-Cover.png",
+      youtubeVideoId: "LFVCzE1FEKQ",
       link: "https://www.hostlyapp.com/",
     },
   ];
@@ -42,15 +44,31 @@ export default function Projects() {
             key={index}
             className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg flex flex-col"
           >
-            {/* Image */}
-            <div className="relative w-full h-64">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
+            {/* Media: YouTube embed or cover image */}
+            <div
+              className={
+                project.youtubeVideoId
+                  ? "relative w-full aspect-video bg-black"
+                  : "relative w-full h-64"
+              }
+            >
+              {project.youtubeVideoId ? (
+                <iframe
+                  title={`${project.title} demo video`}
+                  src={`https://www.youtube.com/embed/${project.youtubeVideoId}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full border-0"
+                />
+              ) : project.image ? (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              ) : null}
             </div>
 
             {/* Content */}
