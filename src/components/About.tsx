@@ -1,7 +1,6 @@
 "use client";
 import { BentoGrid, BentoGridItem } from "./BentoGrid";
 import Image from "next/image";
-
 import Button from "./Button";
 
 const educationDescription = (
@@ -24,13 +23,27 @@ const educationDescription = (
 const experienceDescription = (
   <ul>
     <li className="mb-4">
-      <strong>4+ years in web development:</strong> Extensive experience in
+      <strong>5+ years in web development:</strong> Extensive experience in
       creating robust, efficient, and scalable web solutions.
     </li>
     <li>
       <strong>Enterprise and startup experience:</strong> Comfortable working
       with large, long-lived codebases as well as fast-moving, early-stage
       products.
+    </li>
+  </ul>
+);
+
+const quickStatsDescription = (
+  <ul className="space-y-2">
+    <li>
+      <strong>Location:</strong> Las Vegas, NV (Open to remote / relocation)
+    </li>
+    <li>
+      <strong>Work Auth:</strong> U.S. Citizen / Authorized for any employer
+    </li>
+    <li>
+      <strong>Availability:</strong> Available to start immediately
     </li>
   </ul>
 );
@@ -77,17 +90,8 @@ const items = [
     description: contactDescription,
   },
   {
-    header: (
-      <div className="w-full h-full md:min-h-[250px]  min-h-[500px] object-cover flex items-center justify-center  rounded-xl relative">
-        <Image
-          src="/profile-dog.jpg"
-          alt="David with dog"
-          fill
-          style={{ objectFit: "cover" }}
-          className="rounded-xl"
-        />
-      </div>
-    ),
+    title: "Hiring Details",
+    description: quickStatsDescription,
   },
 ];
 
