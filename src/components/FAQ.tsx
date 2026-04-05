@@ -51,7 +51,7 @@ const faqItems: { title: string; description: ReactNode }[] = [
           I thrive in environments where I can express my{" "}
           <strong>entrepreneurial creativity through code</strong>, treating
           every feature with the same level of ownership as my own projects.
-          Ultimately, I aim to be a thought leader in the tech space—leading
+          Ultimately, I aim to be a thought leader in the tech space, leading
           teams of engineers who are genuinely excited by the mission and
           building a culture where technical excellence drives meaningful
           growth.
@@ -66,7 +66,7 @@ const faqItems: { title: string; description: ReactNode }[] = [
         <p className="leading-relaxed mb-4">
           I view AI as a powerful force multiplier, a tool that significantly
           accelerates my development velocity without compromising my role as
-          the final architect. I utilize
+          the final architect. I utilize{" "}
           <strong>AI agents within Cursor</strong> to generate boilerplate and
           iterative code rapidly, allowing me to focus on high-level system
           design and complex logic.
