@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import IntroVideo from "@/components/IntroVideo";
 import Border from "@/components/Border";
 import dynamic from "next/dynamic";
 import Projects from "@/components/Projects";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <IntroVideo />
       <Border />
       <Projects />
       <Border />
