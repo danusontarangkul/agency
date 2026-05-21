@@ -2,11 +2,21 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"], // Alias path for general source files
-      "@/components/*": ["src/components/*"], // Alias path for components
-      "@/utils/*": ["src/utils/*"] // Alias path for utility files
+      "@/*": [
+        "src/*"
+      ], // Alias path for general source files
+      "@/components/*": [
+        "src/components/*"
+      ], // Alias path for components
+      "@/utils/*": [
+        "src/utils/*"
+      ] // Alias path for utility files
     },
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -22,8 +32,16 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
